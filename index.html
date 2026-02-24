@@ -210,17 +210,25 @@ footer {
 
 <section id="booking">
     <h2 class="section-title">Book Your Trip</h2>
-    <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="tel" placeholder="Phone Number" required>
-        <select required>
+    <form action="https://formsubmit.co/youremail@example.com" method="POST">
+        <!-- Replace youremail@example.com with your real email -->
+
+        <!-- Optional: Redirect to Thank You page -->
+        <input type="hidden" name="_next" value="https://yourusername.github.io/al-travels/thankyou.html">
+
+        <!-- Optional: Disable CAPTCHA -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <select name="service" required>
             <option value="">Select Service</option>
             <option>Flight Booking</option>
             <option>Holiday Package</option>
             <option>Visa Assistance</option>
         </select>
-        <textarea rows="4" placeholder="Travel Details"></textarea>
+        <textarea name="details" rows="4" placeholder="Travel Details"></textarea>
         <button type="submit">Submit Booking</button>
     </form>
 </section>
@@ -239,4 +247,5 @@ footer {
 <a href="https://wa.me/07810633081" class="whatsapp" target="_blank">💬</a>
 
 </body>
+
 </html>
